@@ -237,6 +237,9 @@ body{
 }
 
 .card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -244,7 +247,7 @@ body{
   top: 0;
   left: 0;
   z-index: 2;
-  background: linear-gradient(to bottom, rgba(4,8,15,0), #192133 90%);
+  background: linear-gradient(to bottom, rgba(4,8,15,0), #192133 60%);
   padding: 10px;
   transition: .5s;
 }
@@ -254,7 +257,7 @@ body{
   font-size: 15px;
   font-weight: 500;
   text-transform: capitalize;
-  margin-top: 60%;
+  margin-top: auto;
 }
 
 .des{
@@ -327,4 +330,63 @@ body{
 .pre-btn:hover img,
 .nxt-btn:hover img{
   opacity: 1;
+}
+
+.footer{
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  padding-left: 4%;
+  display: flex;
+  gap: 1rem;
+}
+.left-footer{
+  width: 59%;
+}
+.footer-links{
+  margin-top: 10px;
+  display: flex;
+  list-style-type: none;
+}
+.footer-links a{
+  text-decoration: none;
+  margin-right: 20px;
+  text-transform: Capitalise;
+  color: white;
+  opacity: 0.9;
+  font-size: 15px;
+}
+
+.footer-items a:hover{
+  color:#1f80e0;
+}
+
+.copyright{
+  width: 82%;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 1rem;
+  line-height: 170%;
+}
+
+.right-footer{
+  text-align: right;
+  width: 35%;
+
+}
+
+.right-footer .footer-links{
+  margin-left: auto;
+  margin-right: 0;
+  justify-content: flex-end;
+}
+
+.about-me{
+  width: 100%;
+  text-align: end;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 1rem;
+  line-height: 170%;
 }
