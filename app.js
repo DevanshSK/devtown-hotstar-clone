@@ -76,19 +76,7 @@ setInterval(() => {
   createSlide();
 }, 3000);
 
-// My method for creating slides
-// let slides = '';
-// movies.forEach(movie => {
-//   slides +=  `
-//   <div class="slider">
-//     <div class="slide-content">
-//       <h1 class="movie-title">${movie.name}</h1>
-//       <p class="movie-des">${movie.des}</p>
-//     </div>
-//     <img src="${movie.image}" alt="slider-1">
-//   </div>`;
-// });
-// carousel.innerHTML = slides;
+
 
 
 // Video cards
@@ -101,5 +89,22 @@ videoCards.forEach(item => {
   item.addEventListener('mouseleave', () => {
     let video = item.children[1];
     video.pause();
+  });
+});
+
+// Card sliders
+let cardContainers = [...document.querySelectorAll('.card-container')];
+let preBtns = [...document.querySelectorAll('.pre-btn')];
+let nxtBtns = [...document.querySelectorAll('.nxt-btn')];
+
+cardContainers.forEach( (item, i) => {
+  let containerDimensions = item.getBoundingClientRect();
+  let containerWidth = containerDimensions.width;
+
+  nxtBtns[i].addEventListener('click', () => {
+    item.scrollLeft += containerWidth - 200;
+  });
+  preBtns[i].addEventListener('click', () => {
+    item.scrollLeft -= containerWidth + 200;
   });
 });
